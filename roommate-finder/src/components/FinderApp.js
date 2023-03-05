@@ -29,8 +29,8 @@ function FinderApp(props) {
         }
         else{
             return <Routes>
-                <Route path="/*" element={<Login change={updateStatus}/>}></Route>
-            </Routes>
+                    <Route path="/*" element={<Login change={updateStatus}/>}></Route>
+                </Routes>
         }
     }
     
