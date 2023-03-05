@@ -1,6 +1,11 @@
 import React from 'react'
+import {useNavigate} from 'react-router-dom';
 
-export default function Login() {
+export default function Login(props) {
+
+    const updateStatus = props.change;
+
+    const nav = useNavigate();
 
   return (
       <form className="col-md-4 m-5">
@@ -34,7 +39,10 @@ export default function Login() {
           </div>
         </div>
         <div className="d-grid">
-          <button type="submit" className="btn btn-primary">
+          <button onClick={(e) => {
+            updateStatus();
+            nav('/');
+          }} type="submit" className="btn btn-primary">
             Submit
           </button>
         </div>
